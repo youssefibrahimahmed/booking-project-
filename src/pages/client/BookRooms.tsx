@@ -16,13 +16,13 @@ function BookRooms() {
         return <Error />
     }
     return (
-        <div className='bg-blue-100/70    min-h-screen p-15'>
+        <div className='bg-blue-100/70    min-h-screen p-5 lg:p-15'>
 
             <div className="w-full lg:w-[75%] flex mx-auto ">
 
                 <NavLink className='' to={'/rooms'}> <p className='items-center flex text-blue-600 mb-3 font-semibold '>  <ChevronLeft className='inline' size={20} /> Back to Rooms</p></NavLink>
             </div>
-            <div className='flex justify-center'>
+            <div className='flex w-full justify-center'>
 
                 <BookingCard
                     roomId={roomData.id}

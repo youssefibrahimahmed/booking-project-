@@ -9,7 +9,7 @@ import {
   Tv,
   Wifi,
 } from "lucide-react";
-import {useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { supabase } from '../lib/supabase';
 
@@ -112,10 +112,10 @@ function BookingCard({ roomId, imgUrl, roomName, pricePerHour, description }: Ro
 
   return (
 
-    <div className='Booking-card  w-[80%] flex-col xl:flex-row flex items-center xl:justify-between '>
+    <div className='Booking-card w-full lg:w-[80%] flex-col xl:flex-row flex  xl:justify-between '>
 
       {/* left side */}
-      <div className="left   w-full p-10 pt-0">
+      <div className="left   w-full p-0 lg:p-10  pt-0">
 
         {/* image section */}
         <div className="img rounded-xl">
@@ -137,7 +137,7 @@ function BookingCard({ roomId, imgUrl, roomName, pricePerHour, description }: Ro
         </div>
 
         {/* facilities */}
-        <div className='facilities max-w-6xl h-fit mx-auto p-5 bg-white mb-10 rounded-br-2xl rounded-bl-2xl '>
+        <div className='facilities w-full lg:max-w-6xl h-fit mx-auto p-5 bg-white mb-10 rounded-br-2xl rounded-bl-2xl '>
           <p className='font-bold'>Amenties</p>
           <div className="facilities  md:flex p-5 justify-between text-xs text-gray-400 font-semibold">
             <div className='items-center text-center gap-2 flex flex-col '>
@@ -169,7 +169,7 @@ function BookingCard({ roomId, imgUrl, roomName, pricePerHour, description }: Ro
 
 
       </div>
-      <div className="right h-fit w-[70%] p-5 bg-white rounded-xl">
+      <div className="right h-fit w-full xl:w-[70%]  p-5 bg-white rounded-xl">
         <p className='text-2xl font-bold'>Book This Room </p>
         <p className='text-gray-600 font-semibold '>Fill in datails below to complete your booking </p>
         <form className='z-100 flex flex-col mt-5 justify-center ' onSubmit={handleBookRoom}   >
