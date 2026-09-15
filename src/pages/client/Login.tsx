@@ -18,7 +18,7 @@ function Login() {
       setErrorMessage("Password Must be At Least 6 characters")
       return;
     }
-    const {  error } = await supabase.auth.signInWithPassword({
+    const { error } = await supabase.auth.signInWithPassword({
       email: email,
       password: password,
     });
@@ -32,11 +32,11 @@ function Login() {
   }
 
   return (
-    <div className='bg-blue-100/30 overflow-hidden p-5 min-h-screen items-center flex'>
+    <div className='bg-blue-100/30 overflow-hidden w-full overflow-x-hidden h-screen p-5 items-center flex relative'>
       <div className="form bg-white rounded-2xl w-[90%] lg:w-1/4 shadow-2xl mx-auto  items-center p-3 text-center  ">
         <p className='text-2xl font-bold'>Welcome Back</p>
         <p className='text-xs text-gray-600 mb-5 font-semibold'>Log in to continue booking your space</p>
-        <form className='z-100' onSubmit={handleLogIn} >
+        <form className='z-10 relative' onSubmit={handleLogIn} >
 
           <div className="relative">
             <Mail
@@ -69,10 +69,10 @@ function Login() {
 
         </div>
       </div>
-      <div className='absolute w-50 h-50 z-[-1] bg-blue-100 top-[-50px] left-[-50px] rounded-[50%]'> </div>
-      <div className='absolute w-50 h-50 z-[-1] bg-blue-100 bottom-[-50px] right-[-50px] rounded-[50%]'></div>
-      <div className='absolute w-25 z-[-1] h-25 bg-blue-100 bottom-[10px] left-[50px] rounded-[50%]'></div>
-      <div className='absolute z-[-1] w-35 h-35 bg-blue-100 top-[110px] right-[150px] rounded-[50%]'></div>
+      <div className='absolute pointer-events-none w-50 h-50 z-[-1] bg-blue-100 top-[-50px] left-[-50px] rounded-[50%]'> </div>
+      <div className='absolute pointer-events-none w-50 h-50 z-[-1] bg-blue-100 bottom-[-50px] right-[-50px] rounded-[50%]'></div>
+      <div className='absolute pointer-events-none w-25 z-[-1] h-25 bg-blue-100 bottom-[10px] left-[50px] rounded-[50%]'></div>
+      <div className='absolute pointer-events-none z-[-1] w-35 h-35 bg-blue-100 top-[110px] right-[150px] rounded-[50%]'></div>
 
 
     </div>
