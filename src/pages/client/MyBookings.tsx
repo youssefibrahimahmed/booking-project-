@@ -1,13 +1,10 @@
 import MyBookingCard from '../../components/MyBookingCard'
-import { useParams } from 'react-router-dom';
 import Loading from '../../components/Loading';
 import Error from '../../components/Error';
 import useMyBookings from '../../hooks/useMyBookings';
 import NoBookingsCard from '../../components/NoBookingsCard';
 
 function MyBookings() {
-  const { id } = useParams();
-  const roomId = Number(id)
   const { data: bookings, isLoading, isError } = useMyBookings();
 
   if (isLoading) {

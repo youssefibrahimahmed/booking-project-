@@ -53,7 +53,7 @@ function AddRooms() {
           available: available === "Available"
         })
       if (error) {
-        throw new Error(error.message)
+        throw new Error(errorMessage)
       }
       alert('Room added successfully!');
       navigate('/admin/rooms');

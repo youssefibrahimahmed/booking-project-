@@ -72,7 +72,7 @@ export const AdminDashboard = () => {
                     check_out,
                     total_price,
                     status,
-                    profiles (
+                    profiles(
                     full_name,
                     email
                     ),
@@ -84,6 +84,9 @@ export const AdminDashboard = () => {
             if (allBookingsError) {
                 throw new Error(allBookingsError.message)
             }
+            const bookings = allBookings as any[]
+            console.log('ALL BOOKINGS:', allBookings)
+            console.log('FIRST PROFILE:', allBookings?.[0]?.profiles)
 
             // all Rooms 
             const { data: allRooms, error: allRoomsError } = await supabase
@@ -121,7 +124,7 @@ export const AdminDashboard = () => {
                 totalBookings: totalBookings ?? 0,
                 totalCheckedIns: totalCheckedIns ?? 0,
                 recentBookings: recentBookings ?? [],
-                allBookings: allBookings ?? [],
+                allBookings: bookings ?? [],
                 recentUsers: recentUsers ?? [],
                 allRooms: allRooms ?? []
             }

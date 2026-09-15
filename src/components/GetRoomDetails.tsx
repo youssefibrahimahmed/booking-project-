@@ -1,4 +1,4 @@
-import { MapPin, Clock, Users, Ruler, CalendarCheck, ArrowRight, Smartphone } from "lucide-react";
+import { MapPin, Clock, Users, Ruler, CalendarCheck, ArrowRight } from "lucide-react";
 import {
     Projector,
     Plug,

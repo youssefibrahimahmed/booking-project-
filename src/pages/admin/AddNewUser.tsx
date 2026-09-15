@@ -18,7 +18,7 @@ function AddNewUser() {
       setErrorMessage("Password Must be at Least 6 charcters")
       return;
     }
-    const { data, error } = await supabase.auth.signUp({
+    const {  error } = await supabase.auth.signUp({
       email: email,
       password: password,
       options: {
@@ -30,7 +30,7 @@ function AddNewUser() {
         }
       }
     });
-    if (error) return console.log(error.message)
+    if (error) return console.log(errorMessage)
     setEmail("");
     setPhone("");
     setFullName("");

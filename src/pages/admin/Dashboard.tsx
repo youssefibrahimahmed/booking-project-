@@ -1,4 +1,4 @@
-import { ArrowRight, Bed, Calendar, Clock, User, Users } from 'lucide-react'
+import { ArrowRight, Bed, Calendar, Clock,  Users } from 'lucide-react'
 import { NavLink } from 'react-router-dom'
 import { AdminDashboard } from '../../hooks/AdminDashboard'
 import Loading from '../../components/Loading'
@@ -15,7 +15,7 @@ function Dashboard() {
     totalRooms,
     totalBookings,
     totalCheckedIns,
-    recentBookings,
+    allBookings,
     recentUsers,
   } = data
 
@@ -87,7 +87,7 @@ function Dashboard() {
                 </tr>
               </thead>
               <tbody>
-                {recentBookings.map((booking, index) => (
+                {allBookings.slice(0, 5).map((booking, index) => (
                   <tr className='bg-white  font-semibold text-sm' key={booking.id}>
                     <td className="px-4 py-3">
                       {index + 1}

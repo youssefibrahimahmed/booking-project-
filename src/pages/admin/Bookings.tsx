@@ -58,7 +58,7 @@ function Bookings() {
                       <div>
                         {booking.profiles?.full_name}
                         {booking.profiles?.email && (
-                          <p className="text-gray-500 text-xs">{booking.profiles.email}</p>
+                          <p className="text-gray-500 text-xs">{booking.profiles?.email}</p>
                         )}
                       </div>
                     </td>

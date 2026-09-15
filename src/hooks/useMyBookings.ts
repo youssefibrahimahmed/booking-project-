@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query'
 import { supabase } from '../lib/supabase'
 
 export const useMyBookings = () => {
+
     return useQuery({
         queryKey: ['my-bookings'],
         queryFn: async () => {
@@ -29,11 +30,19 @@ export const useMyBookings = () => {
             if (error) {
                 throw error
             }
-            console.log("BOOKINGS:", data);
-            return data
+
+            const bookings = data?.map((booking) => ({
+                ...booking,
+                rooms: Array.isArray(booking.rooms)
+                    ? booking.rooms[0]
+                    : booking.rooms
+            }))
+            return bookings
         }
 
+
     });
+
 }
 
 export default useMyBookings

@@ -18,7 +18,7 @@ function Login() {
       setErrorMessage("Password Must be At Least 6 characters")
       return;
     }
-    const { data, error } = await supabase.auth.signInWithPassword({
+    const {  error } = await supabase.auth.signInWithPassword({
       email: email,
       password: password,
     });
