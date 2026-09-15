@@ -18,7 +18,7 @@ function BookRooms() {
     return (
         <div className='bg-blue-100/70    min-h-screen p-15'>
 
-            <div className="w-[75%] flex mx-auto ">
+            <div className="w-full lg:w-[75%] flex mx-auto ">
 
                 <NavLink className='' to={'/rooms'}> <p className='items-center flex text-blue-600 mb-3 font-semibold '>  <ChevronLeft className='inline' size={20} /> Back to Rooms</p></NavLink>
             </div>
