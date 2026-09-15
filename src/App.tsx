@@ -11,7 +11,13 @@ import MyBookings from './pages/client/MyBookings'
 import Users from './pages/admin/Users'
 import Bookings from './pages/admin/Bookings'
 import AddRooms from './pages/admin/AddRooms'
-import EditRooms from './pages/admin/EditRooms'
+import BookRooms from './pages/client/BookRooms'
+import ProfileLayout from './layout/ProfileLayout'
+import ProfileDetails from './components/ProfileDetails'
+import ChangePassword from './components/ChangePassword'
+import AdminLayout from './layout/AdminLayout'
+import AdminRooms from './pages/admin/AdminRooms'
+import AddNewUser from './pages/admin/AddNewUser'
 
 function App() {
 
@@ -25,19 +31,35 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/rooms' element={<Rooms />} />
           <Route path='/rooms/:id' element={<RoomDetails />} />
+          <Route path='/book-room/:id' element={<BookRooms />} />
           <Route path='/my-bookings' element={<MyBookings />} />
 
+          <Route path="/profile-details/" element={<ProfileLayout />}>
+
+            <Route index element={<ProfileDetails />} />
+
+
+            <Route path="change-password/" element={<ChangePassword />} />
+
+
+          </Route>
+
+        </Route >
+
           {/* admin pages */}
-          <Route path='/admin' element={<Dashboard />} />
-          <Route path='/admin/users' element={<Users />} />
-          <Route path='/admin/bookings' element={<Bookings />} />
-          <Route path='/admin/add-room' element={<AddRooms />} />
-          <Route path='/admin/edit-room' element={<EditRooms />} />
+          <Route path='/admin' element={<AdminLayout />}>
+            <Route index element={<Dashboard />} />
+            <Route path='/admin/users' element={<Users />} />
+            <Route path='/admin/bookings' element={<Bookings />} />
+            <Route path='/admin/rooms' element={<AdminRooms />} />
+            <Route path='/admin/add-room' element={<AddRooms />} />
+            <Route path='/admin/add-user' element={<AddNewUser />} />
 
-        </Route>
+          </Route >
 
-      <Route path='/login' element={<Login />} />
-      <Route path='/register' element={<Register />} />
+
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
 
       </Routes>
     </BrowserRouter>

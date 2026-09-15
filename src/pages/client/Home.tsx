@@ -1,8 +1,14 @@
-import React from 'react'
+import HeroSection from '../../components/HeroSection'
+import FeaturedRooms from '../../components/FeaturedRooms'
+import WhyChooseUs from '../../components/WhyChooseUs'
 
 function Home() {
     return (
-        <div className='text-red-500'>Home</div>
+        <>
+            <HeroSection />
+            <FeaturedRooms />
+            <WhyChooseUs/>
+        </>
     )
 }
 
