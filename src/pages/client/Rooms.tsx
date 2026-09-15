@@ -61,7 +61,7 @@ function Rooms() {
         </div>
       </div >
       <div className="featured mb-10 max-w-6xl  mx-auto border p-5 rounded-xl border-gray-100 shadow-2xl">
-        <div className="rooms grid grid-cols-3 gap-6">
+        <div className="rooms grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {
             sortedRoomes?.map((room) => (
               <RoomSquareCard
