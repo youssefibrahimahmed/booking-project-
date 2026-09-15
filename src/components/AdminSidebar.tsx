@@ -1,6 +1,6 @@
 import logo from '../assets/logo.png'
 import { NavLink } from 'react-router-dom'
-import { Bed, Calendar, PenIcon, PlusCircle,User } from 'lucide-react'
+import { Bed, Calendar, PenIcon, PlusCircle, User } from 'lucide-react'
 import { BsWindowSplit } from 'react-icons/bs'
 function AdminSidebar() {
     return (
@@ -33,9 +33,7 @@ function AdminSidebar() {
 
                     <NavLink end className={({ isActive }) => isActive ? "flex items-center gap-2 bg-blue-700 pl-3 pr-20 py-2 rounded w-full " : "flex items-center gap-2  pl-3 pr-20 py-2 rounded w-full "} to='/admin/add-room'><PlusCircle className="" size={20} /> Add Room</NavLink>
                 </div>
-                <div className='flex gap-2 items-center   relative w-full   rounded  '>
-                    <NavLink end className={({ isActive }) => isActive ? "flex items-center gap-2 bg-blue-700 pl-3 pr-20 py-2 rounded w-full " : "flex items-center gap-2  pl-3 pr-20 py-2 rounded w-full "} to='/admin/edit-room'><PenIcon className="" size={20} /> Edit Room</NavLink>
-                </div>
+
             </div>
         </div>
     )
