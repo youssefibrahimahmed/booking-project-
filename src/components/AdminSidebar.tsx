@@ -1,6 +1,6 @@
 import logo from '../assets/logo.png'
 import { NavLink } from 'react-router-dom'
-import { Bed, Calendar, PenIcon, PlusCircle, User } from 'lucide-react'
+import { Bed, Calendar, PlusCircle, User } from 'lucide-react'
 import { BsWindowSplit } from 'react-icons/bs'
 function AdminSidebar() {
     return (
